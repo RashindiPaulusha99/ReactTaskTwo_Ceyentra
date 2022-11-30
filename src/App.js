@@ -6,6 +6,7 @@ import _ from "lodash";
 import { v4 } from "uuid";
 import Data from "./Data/Data";
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function App() {
 
@@ -72,7 +73,10 @@ function App() {
           value={text}
           onChange={(e) => settext(e.target.value)}
         />
-        <button className="button" onClick={additem}>Add</button>
+        <Button color="secondary" variant="contained" size="small" className="button" onClick={additem}>
+          Add New
+        </Button>
+        
       </div>
 
       <div className="App">

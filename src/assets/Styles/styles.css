@@ -13,8 +13,7 @@ body {
   .droppable-col {
     width: 100%;
     background-color: whitesmoke;
-    padding: 10px 10px 0 10px;
-    border-radius: 7px;
+    padding: 15px 10px 0 10px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -28,7 +27,7 @@ body {
     background-color: rgb(235, 164, 233);
   }
   .item.dragging {
-    background-color: rgb(196, 43, 66);
+    background-color: rgb(196, 22, 120);
   }
 
   .heading{
@@ -37,13 +36,13 @@ body {
 
   .input{
     position: relative;
-    left: 15px;
+    left: 20px;
     width: 25%;
-    
   }
 
   .button{
     position: relative;
-    left: 20px;
+    left: 25px;
+    height: 40px;
     
   }
