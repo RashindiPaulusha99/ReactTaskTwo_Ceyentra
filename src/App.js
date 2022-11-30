@@ -1,6 +1,8 @@
 
 import React, { useState } from "react";
 import "./assets/Styles/styles.css";
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import _ from "lodash";
 import { v4 } from "uuid";
@@ -61,8 +63,9 @@ function App() {
     });
     settext("");
   };
+
   return (
-    <>
+    <DndProvider backend={HTML5Backend}>
       <div>
         <img src={logo}/>
          <TextField
@@ -130,7 +133,7 @@ function App() {
           
         </DragDropContext>
       </div>
-    </>
+    </DndProvider>
   );
 }
 
