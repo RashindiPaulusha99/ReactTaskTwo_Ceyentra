@@ -5,6 +5,8 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    position: relative;
+    top: 50px;
   }
   .App .column {
     width: 30%;
@@ -36,13 +38,15 @@ body {
 
   .input{
     position: relative;
-    left: 20px;
+    top: 100px;
+    left: -100px;
     width: 25%;
   }
 
   .button{
     position: relative;
-    left: 25px;
+    top: 50px;
+    left: -90px;
     height: 40px;
     
   }

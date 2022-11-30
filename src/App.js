@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 import Data from "./Data/Data";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import logo from './assets/Images/Group57.png';
 
 function App() {
 
@@ -63,7 +64,7 @@ function App() {
   return (
     <>
       <div>
-        
+        <img src={logo}/>
          <TextField
           label="Todo"
           id="outlined-size-small"
