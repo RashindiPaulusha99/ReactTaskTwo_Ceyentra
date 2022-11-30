@@ -5,6 +5,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import _ from "lodash";
 import { v4 } from "uuid";
 import Data from "./Data/Data";
+import TextField from '@mui/material/TextField';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
       return prev;
     });
   };
-  
+
   const additem = () => {
     setstate((prev) => {
       return {
@@ -61,19 +62,25 @@ function App() {
   return (
     <>
       <div>
-        <input
+        
+         <TextField
+          label="Todo"
+          id="outlined-size-small"
+          size="small"
           type="text"
+          className="input"
           value={text}
           onChange={(e) => settext(e.target.value)}
         />
-        <button onClick={additem}>Add</button>
+        <button className="button" onClick={additem}>Add</button>
       </div>
+
       <div className="App">
         <DragDropContext onDragEnd={handleDragEnd}>
           {_.map(state, (data, key) => {
             return (
               <div key={key} className={"column"}>
-                <h3>{data.title}</h3>
+                <h3 className="heading">{data.title}</h3>
                 <Droppable droppableId={key}>
                   {(provided) => {
                     return (
@@ -101,9 +108,6 @@ function App() {
                                   >
                                     {" "}
                                     {el.name}
-                                    {/* <span {...provided.dragHandleProps}>
-                                    Drag by me
-                                  </span> */}
                                   </div>
                                 );
                               }}

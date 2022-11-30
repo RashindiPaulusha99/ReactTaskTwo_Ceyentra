@@ -23,11 +23,11 @@ const Data = {
     items: [item, item1]
   },
   "in-progress": {
-    title: "In progress",
+    title: "Processing",
     items: [item2]
   },
   completed: {
-    title: "Completed",
+    title: "Done",
     items: [item3]
   }
 };
